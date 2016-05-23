@@ -13,7 +13,7 @@
 <body>
 	<header class="header">
 		<div class="wrap">
-			<div class="logo">网易云音乐</div>
+			<div class="logo">智能推荐云音乐</div>
 			<nav class="classify">
 				<div class="item-wrap active">
 					<a class="nav-item" href="javascript:;">发现音乐</a>
@@ -30,7 +30,8 @@
 				</div>
 			</nav>
 			<div class="login">
-				<a class="link" href="javascript:;">登录</a>
+				<a id="show-log" class="link" href="javascript:;">登录</a>
+				<a id="user-home" class="link" href="javascript:;">aaaaaaaaaa</a>
 				<i class="fa fa-sort-desc fa-lg logicon" aria-hidden="true"></i>
 			</div>
 			<div class="search">
@@ -57,6 +58,8 @@
 			<a href="javascript:;" id="next-banner" class="next-img">&gt;</a>
 			<nav class="adicons">
 				<span class="active ads-i"></span>
+				<span class="ads-i"></span>
+				<span class="ads-i"></span>
 				<span class="ads-i"></span>
 				<span class="ads-i"></span>
 			</nav>
@@ -187,7 +190,7 @@
 							<i class="fa fa-chevron-right fa-lg next-group" aria-hidden="true"></i>
 						</a>
 						<div class="disk-roll">
-							<ul class="disk-group active">
+							<ul class="disk-group">
 								<li class="disk-item">
 									<img src="imgs/disk1.jpg" alt="">
 									<p class="song-info">周杰伦 世界巡回演唱会</p>
@@ -507,7 +510,7 @@
 			</div>
 			<div class="right-con">
 				<div class="log-area">
-					<p>登录网易云音乐，可以享受无限收藏的乐趣，并且无限同步到手机</p>
+					<p>登录智能推荐云音乐，可以享受无限收藏的乐趣，并且无限同步到手机</p>
 					<a href="javascript:;">用户登录</a>
 				</div>
 				<div class="singer-list">
@@ -617,6 +620,107 @@
 				<i class="fa fa-step-backward fa-lg" aria-hidden="true"></i>
 				<i class="fa fa-play-circle-o fa-2x" aria-hidden="true"></i>
 				<i class="fa fa-step-forward fa-lg" aria-hidden="true"></i>
+			</div>
+			<div class="play-img">
+				<img src="imgs/play1.jpg" alt="">
+			</div>
+			<div class="play">
+				<div class="words">
+					<span>初学者</span>
+					<span>薛之谦</span>
+				</div>
+				<div class="pbar">
+					<div class="cur">
+						<i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+					</div>
+				</div>
+			</div>
+			<div class="ptime">
+				<span class="curtime">02:08</span>/
+				<span class="alltime">04:40</span>
+			</div>
+			<div class="voice">
+				<i class="fa fa-volume-up fa-lg" aria-hidden="true"></i>
+				<div class="voice-control">
+					<div class="all">
+						<div class="cur">
+							<i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="mask"></div>
+	<div id="logbox" class="alertbox">
+		<div class="box-head">登录</div>
+		<div class="box-main">
+			<div class="box-wrap">
+				<div class="box-item">
+					<input id="log-phone" class="border-input" type="text" placeholder="请输入手机号">
+				</div>
+				<p class="log-phone-error error">请输入11位手机号</p>
+				<div class="box-item">
+					<input id="log-pass" class="border-input" type="text" placeholder="请输入密码">
+				</div>
+				<p class="log-pass-error error">请输入密码</p>
+				<div id="do-login" class="box-btn">登录</div>
+				
+			</div>
+			<div class="box-some">
+					<a class="left log-forget" href="javascript:;">忘记密码？</a>
+					<a class="right log-regist" href="javascript:;">立即注册→</a>
+			</div>
+		</div>
+	</div>
+	<div id="regbox" class="alertbox">
+		<div class="box-head">注册</div>
+		<div class="box-main">
+			<div class="box-wrap">
+				<div class="box-item">
+					<label for="reg-name">姓&nbsp;&nbsp;&nbsp;&nbsp;名：</label>
+					<input id="reg-name" class="border-input" type="text" placeholder="请输入姓名">
+				</div>
+				<p class="name-error error">用户名不能为空</p>
+				<div class="box-item">
+					<label>性&nbsp;&nbsp;&nbsp;&nbsp;别：</label>
+					<label><input class="reg-sex" type="radio" name="sex" checked="checked" value="1" >男</label>
+					<label><input class="reg-sex" type="radio" name="sex" value="0" >女</label>
+				</div>
+				<div class="box-item">
+					<label for="reg-phone">手机号：</label>
+					<input id="reg-phone" class="border-input" type="text" placeholder="请输入手机号">	
+				</div>
+				<p class="phone-error error">请输入11位手机号</p>
+				<div class="box-item">
+					<label for="reg-pass">密&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+					<input  id="reg-pass" class="border-input" type="text" placeholder="请设置密码,6-16位">
+				</div>
+				<p class="pass-error error">请输入6-16位的密码</p>
+				<div class="box-btn go-yzm">下一步</div>
+				
+			</div>
+			<div class="box-some">
+				<a class="left go-log" href="javascript:;">&lt;返回登录</a>
+			</div>
+		</div>
+	</div>
+	<div id="yzmbox" class="alertbox">
+		<div class="box-head">注册</div>
+		<div class="box-main">
+			<div class="box-wrap">
+				<p class="box-info">为了安全，我们会给你发送短信验证码</p>
+				<div class="box-item">
+					<input id="reg-yzm" class="border-input" type="text" placeholder="请输入验证码">
+					<span class="last-time">00:59</span>
+					<a class="get-yz" href="javascript:;">重新发送</a>
+				</div>
+				<p class="yzm-error error">请输入正确的验证码</p>
+				<div class="box-btn" id="zc-succ">开启云音乐</div>
+			</div>
+			<div class="box-some">
+				<a class="left go-log" href="javascript:;">&lt;返回登录</a>
 			</div>
 		</div>
 	</div>
