@@ -1,0 +1,14 @@
+
+/*play-list*/
+.play-list{
+	margin-left: -50px;
+	overflow: hidden;
+}
+.rcmd-item{
+	margin-left: 50px;
+	float: left;
+}
+.list-con{
+	padding: 20px 40px 40px;
+}
+/*play-list*/

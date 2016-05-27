@@ -1,0 +1,221 @@
+
+.left-con{
+	padding: 47px 30px 40px 39px;
+	float: left;
+	border-right: 1px solid #d3d3d3;
+	width: 640px;
+	min-height: 700px;
+}
+.n-artist{
+	height: 300px;
+	position: relative;
+}
+.n-artist img{
+	width: 640px;
+	height: 300px;
+	display: block;
+}
+.n-artist .btm{
+	position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    height: 40px;
+}
+.btm h2{
+	height: 34px;
+    font-weight: normal;
+    font-family: "Microsoft Yahei";
+    font-size: 28px;
+    color: #fff;
+    text-shadow: 1px 0 0 rgba(0,0,0,0.8);
+    text-indent: 2em;
+}
+.m-tab{
+	height: 39px;
+    border: 1px solid #ccc;
+    border-top: 0;
+    margin-bottom: 20px;
+    background: #f7f7f7;
+}
+.m-tab a{
+	float: left;
+	width: 134px;
+	height: 39px;
+	line-height: 36px;
+	text-align: center;
+	box-sizing:border-box;
+	position: relative;
+	left: -1px;
+	border-top: 3px solid transparent;
+}
+.m-tab a:hover{
+	border-top: 3px solid #c00;
+}
+.m-tab .active{
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid transparent;
+	border-top: 3px solid #c00;
+	
+}
+.m-tab .active span{
+	display: block;
+	position: relative;
+	top: 1px;
+	background: #fbfbfb;
+}
+.left-con .m-main{
+	display: none;
+}
+.left-con section.active{
+	display: block;
+}
+/*top50*/
+.m-control{
+	height: 32px;
+	margin-bottom: 20px;
+}
+.con-icon{
+	min-width: 23px;
+	padding: 0 5px;
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #c4c4c4;
+	margin-right: 5px;
+	border-radius: 3px;
+}
+.con-icon .fa{
+	margin-right: 5px;
+}
+.play-icon{
+	background: #3B8AD4;
+	color: #fff;
+}
+.m-table{
+	width: 100%;
+	border:1px solid #d9d9d9;
+}
+.w1{
+	width: 40px;
+}
+.w1 .fa{
+	margin-left: 15px;
+}
+.w2{
+	width: 91px;
+}
+.w3{
+	width: 14%;
+}
+.m-table th{
+	height: 18px;
+    line-height: 18px;
+    padding: 8px 10px;
+}
+.m-table td{
+	padding: 6px 10px;
+    line-height: 18px;
+    text-align: left;
+}
+/*top50*/
+
+/*全部专辑*/
+.play-list {
+    margin-left: -26px;
+    overflow: hidden;
+}
+.rcmd-item {
+    margin-left: 26px;
+    float: left;
+}
+
+
+/*m-page*/
+.m-page{
+	text-align: center;
+	margin: 20px 0;
+}
+.m-page a{
+	height: 22px;
+	padding: 0 8px;
+	line-height: 22px;
+	border:1px solid #ccc;
+	border-radius: 3px;
+	margin: 0 5px;
+	display: inline-block;
+}
+.m-page .active{
+	background: #c00;
+	color:#fff;
+}
+.page-next,.page-prev{
+	background: #f7f7f7;
+}
+.m-page .default{
+	background: #f3f3f3;
+	color: #cacaca;
+	cursor: default;
+}
+/*m-page*/
+
+/*全部专辑*/
+
+/*歌手介绍*/
+.n-artdesc{
+	margin-top: 30px;
+}
+.n-artdesc h2{
+	margin: 28px 0 8px 0;
+	color:#333;
+	font-size: 14px;
+	font-weight: bold;
+}
+.n-artdesc h2 i{
+	margin-right: 7px;
+	background: #c10d0c;
+}
+.n-artdesc p{
+	line-height: 25px;
+	color: #666;
+	text-indent: 2em;
+}
+/*歌手介绍*/
+
+.right-con{
+	float: left;
+	padding: 0 20px;
+	width: 210px;
+	position: relative;
+}
+.listener-list{
+	margin-top: 15px;
+}
+.listener-tit{
+	height: 23px;
+	border-bottom: 1px solid #ccc;
+}
+.listener-tit h3{
+	color: #333;
+	float: left;
+}
+
+.m-piclist{
+	overflow: hidden;
+	margin-left: -13px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.piclist-i{
+	width: 40px;
+	height: 40px;
+	float: left;
+	margin-left: 13px;
+	margin-bottom: 13px;
+}
+.piclist-i img{
+	width: 100%;
+	height: 100%;
+}

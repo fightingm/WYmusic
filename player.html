@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/player.css">
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/player.js"></script>
+</head>
+<body>
+	<header class="header">
+		<div class="wrap">
+			<div class="logo">智能推荐云音乐</div>
+			<nav class="classify">
+				<div class="item-wrap active">
+					<a class="nav-item" href="index.html">发现音乐</a>
+					<i class="fa fa-caret-up fa-lg" aria-hidden="true"></i>
+				</div>
+				<div class="item-wrap">
+					<a class="nav-item" href="javascript:;">我的音乐</a>
+				</div>
+				<div class="item-wrap">
+					<a class="nav-item" href="javascript:;">朋友</a>
+				</div>
+				<div class="item-wrap">
+					<a class="nav-item" href="javascript:;">下载客户端</a>
+				</div>
+			</nav>
+			<div class="login">
+				<a id="show-log" class="link" href="javascript:;">登录</a>
+				<a id="user-home" class="link" href="javascript:;">aaaaaaaaaa</a>
+				<i class="fa fa-sort-desc fa-lg logicon" aria-hidden="true"></i>
+			</div>
+			<div class="search">
+				<i class="fa fa-search" aria-hidden="true"></i>
+				<input class="ser-btn" type="text" placeholder="单曲/歌手/专辑/歌单/MV用户">
+			</div>
+		</div>
+	</header>
+	<div class="header-bar">
+		<div class="wrap">
+			<nav class="list">
+				<a class="list-item" href="javascript:;">推荐</a>
+				<a class="list-item" href="javascript:;">排行榜</a>
+				<a class="list-item active" href="javascript:;">歌单</a>
+				<a class="list-item" href="javascript:;">主播电台</a>
+				<a class="list-item" href="javascript:;">歌手</a>
+				<a class="list-item" href="javascript:;">新碟上架</a>
+			</nav>
+		</div>
+	</div>
+	<div class="discover">
+		<div class="wrap">
+			<div class="left-con">
+				<section class="n-artist">
+					<img id="singer-img" src="" alt="">
+					<div class="btm">
+						<h2 class="singer-name"></h2>
+					</div>
+				</section>
+				<nav class="m-tab">
+					<a class="active" href="javascript:;">
+						<span>热门50单曲</span>
+					</a>
+					<a href="javascript:;">
+						<span>所有专辑</span>
+					</a>
+					<a href="javascript:;">
+						<span>歌手介绍</span>
+					</a>
+				</nav>
+				
+				<section class="m-main active">
+					<div class="m-control">
+						<a class="play-icon con-icon" href="javascript:;">
+							<i class="fa fa-play-circle" aria-hidden="true"></i>播放
+						</a>
+						<a class="con-icon" href="javascript:;">
+							<i class="fa fa-heart-o" aria-hidden="true"></i>收藏
+						</a>
+					</div>
+					<div class="table-list">
+						<table class="m-table">
+							<thead>
+								<tr>
+									<th class="w1">
+										<div class="wp">&nbsp;</div>
+									</th>
+									<th>
+										<div class="wp">歌曲标题</div>
+									</th>
+									<th class="w2">
+										<div class="wp">歌曲专辑</div>
+									</th>
+									<th class="w3">
+										<div class="wp">歌手</div>
+									</th>
+								</tr>
+							</thead>
+							<tbody id="table-data">
+							</tbody>
+						</table>
+					</div>
+				</section>
+
+				<section class="m-main">
+					<div class="rcmd-list">
+						<ul class="play-list">
+							<li class="rcmd-item">
+								<div class="list-cover">
+									<img src="imgs/rcmd1.jpg" alt="">
+									<div class="bottom">
+										<i class="fa fa-headphones fa-lg" aria-hidden="true"></i>
+										<i class="fa fa-play-circle fa-lg" aria-hidden="true"></i>
+									</div>
+								</div>
+								<div class="song-info">aaaaa</div>
+							</li>
+							<li class="rcmd-item">
+								<div class="list-cover">
+									<img src="imgs/rcmd1.jpg" alt="">
+									<div class="bottom">
+										<i class="fa fa-headphones fa-lg" aria-hidden="true"></i>
+										<i class="fa fa-play-circle fa-lg" aria-hidden="true"></i>
+									</div>
+								</div>
+								<div class="song-info">aaaaa</div>
+							</li>
+							<li class="rcmd-item">
+								<div class="list-cover">
+									<img src="imgs/rcmd1.jpg" alt="">
+									<div class="bottom">
+										<i class="fa fa-headphones fa-lg" aria-hidden="true"></i>
+										<i class="fa fa-play-circle fa-lg" aria-hidden="true"></i>
+									</div>
+								</div>
+								<div class="song-info">aaaaa</div>
+							</li>
+							<li class="rcmd-item">
+								<div class="list-cover">
+									<img src="imgs/rcmd1.jpg" alt="">
+									<div class="bottom">
+										<i class="fa fa-headphones fa-lg" aria-hidden="true"></i>
+										<i class="fa fa-play-circle fa-lg" aria-hidden="true"></i>
+									</div>
+								</div>
+								<div class="song-info">aaaaa</div>
+							</li>
+							<li class="rcmd-item">
+								<div class="list-cover">
+									<img src="imgs/rcmd1.jpg" alt="">
+									<div class="bottom">
+										<i class="fa fa-headphones fa-lg" aria-hidden="true"></i>
+										<i class="fa fa-play-circle fa-lg" aria-hidden="true"></i>
+									</div>
+								</div>
+								<div class="song-info">aaaaa</div>
+							</li>
+							<li class="rcmd-item">
+								<div class="list-cover">
+									<img src="imgs/rcmd1.jpg" alt="">
+									<div class="bottom">
+										<i class="fa fa-headphones fa-lg" aria-hidden="true"></i>
+										<i class="fa fa-play-circle fa-lg" aria-hidden="true"></i>
+									</div>
+								</div>
+								<div class="song-info">aaaaa</div>
+							</li>
+							<li class="rcmd-item">
+								<div class="list-cover">
+									<img src="imgs/rcmd1.jpg" alt="">
+									<div class="bottom">
+										<i class="fa fa-headphones fa-lg" aria-hidden="true"></i>
+										<i class="fa fa-play-circle fa-lg" aria-hidden="true"></i>
+									</div>
+								</div>
+								<div class="song-info">aaaaa</div>
+							</li>
+							<li class="rcmd-item">
+								<div class="list-cover">
+									<img src="imgs/rcmd1.jpg" alt="">
+									<div class="bottom">
+										<i class="fa fa-headphones fa-lg" aria-hidden="true"></i>
+										<i class="fa fa-play-circle fa-lg" aria-hidden="true"></i>
+									</div>
+								</div>
+								<div class="song-info">aaaaa</div>
+							</li>
+							<li class="rcmd-item">
+								<div class="list-cover">
+									<img src="imgs/rcmd1.jpg" alt="">
+									<div class="bottom">
+										<i class="fa fa-headphones fa-lg" aria-hidden="true"></i>
+										<i class="fa fa-play-circle fa-lg" aria-hidden="true"></i>
+									</div>
+								</div>
+								<div class="song-info">aaaaa</div>
+							</li>
+							<li class="rcmd-item">
+								<div class="list-cover">
+									<img src="imgs/rcmd1.jpg" alt="">
+									<div class="bottom">
+										<i class="fa fa-headphones fa-lg" aria-hidden="true"></i>
+										<i class="fa fa-play-circle fa-lg" aria-hidden="true"></i>
+									</div>
+								</div>
+								<div class="song-info">aaaaa</div>
+							</li>
+						</ul>
+						<div class="m-page">
+							<a class="page-prev default" href="javascript:;">上一页</a>
+							<a class="page-i active" href="javascript:;">1</a>
+							<a class="page-i" href="javascript:;">2</a>
+							<a class="page-i" href="javascript:;">3</a>
+							<a class="page-next" href="javaascript:;">下一页</a>
+						</div>
+					</div>
+				</section>
+				<section class="m-main">
+					<div class="n-artdesc">
+						<h2>
+							<i>&nbsp;</i>
+							<span class="singer-name">张惠妹</span>简介
+						</h2>
+						<p id="singer-desc">中国台湾著名女歌手，亚洲流行歌坛重量级天后，台湾原住民歌手。张惠妹于华人世界名气极高，于海外（尤美、日等地）也有一定的知名度，已囊括多项华语圈重要的音乐奖项。台湾首位接受美国CNN专访的歌手（并且在2011年第二度接受此媒体《Talk Asia》节目专访），也是首位登上《时代》杂志亚洲版封面、且入选亚洲二十大风云人物及登上亚洲周刊封面的歌手。阿妹在1996年三月被著名台湾音乐人陈志远、陈复明发现并签约丰华唱片。并在同年7月在带自己入行的恩师张雨生的《两伊战争－红色热情》专辑中与张雨生男女对唱《最爱的人伤我最深》。同年12月13日，张惠妹在张雨生的协助下发行第一张个人专辑《姐妹》。1998年 举办第一场个人大型户外售票演唱会“妹力四射”，创下台湾歌手有史以来最快举行大型演唱会的纪录。2009年发行的《阿密特》专辑至今仍是金曲奖史上获得最大成功的作品，曾于第21届时擒下包括专辑、制作人、歌手等六项大奖。代表作品：《姐妹》、《我可以抱你吗》、《记得》、《火》、《如果你也听说》、《掉了》、《我最亲爱的》。</p>
+					</div>
+				</section>
+			</div>
+			<div class="right-con">
+				<div class="listener-list">
+					<div class="listener-tit">
+						<h3>相似歌手</h3>
+					</div>
+					<ul class="m-piclist">
+						<li class="piclist-i"><img src="imgs/singer1.jpg" alt=""></li>
+						<li class="piclist-i"><img src="imgs/singer1.jpg" alt=""></li>
+						<li class="piclist-i"><img src="imgs/singer1.jpg" alt=""></li>
+						<li class="piclist-i"><img src="imgs/singer1.jpg" alt=""></li>
+						<li class="piclist-i"><img src="imgs/singer1.jpg" alt=""></li>
+						<li class="piclist-i"><img src="imgs/singer1.jpg" alt=""></li>
+						<li class="piclist-i"><img src="imgs/singer1.jpg" alt=""></li>
+						<li class="piclist-i"><img src="imgs/singer1.jpg" alt=""></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="playbar">
+		<div class="wrap">
+			<div class="play-control">
+				<i class="fa fa-step-backward fa-lg" aria-hidden="true"></i>
+				<i class="fa fa-play-circle-o fa-2x" id="pause" aria-hidden="true"></i>
+				<i class="fa fa-step-forward fa-lg" aria-hidden="true"></i>
+			</div>
+			<div class="play-img">
+				<img id="playing-author-img" src="imgs/play1.jpg" alt="">
+			</div>
+			<div class="play">
+				<div class="words">
+					<span id="playing-song">初学者</span>
+					<span id="playing-author-name">薛之谦</span>
+				</div>
+				<div class="pbar">
+					<div id="cur-pro" class="cur">
+						<i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+					</div>
+				</div>
+			</div>
+			<div class="ptime">
+				<span id="playing-song-now" class="curtime">00:00</span>/
+				<span id="playing-song-last" class="alltime">00:00</span>
+			</div>
+			<div class="voice">
+				<i class="fa fa-volume-up fa-lg" aria-hidden="true"></i>
+				<div class="voice-control">
+					<div class="all">
+						<div class="cur">
+							<i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="mask"></div>
+	<div id="logbox" class="alertbox">
+		<div class="box-head">登录</div>
+		<div class="box-main">
+			<div class="box-wrap">
+				<div class="box-item">
+					<input id="log-phone" class="border-input" type="text" placeholder="请输入手机号">
+				</div>
+				<p class="log-phone-error error">请输入11位手机号</p>
+				<div class="box-item">
+					<input id="log-pass" class="border-input" type="password" placeholder="请输入密码">
+				</div>
+				<p class="log-pass-error error">请输入密码</p>
+				<div id="do-login" class="box-btn">登录</div>
+				
+			</div>
+			<div class="box-some">
+					<a class="left log-forget" href="javascript:;">忘记密码？</a>
+					<a class="right log-regist" href="javascript:;">立即注册→</a>
+			</div>
+		</div>
+	</div>
+	<div id="regbox" class="alertbox">
+		<div class="box-head">注册</div>
+		<div class="box-main">
+			<div class="box-wrap">
+				<div class="box-item">
+					<label for="reg-name">姓&nbsp;&nbsp;&nbsp;&nbsp;名：</label>
+					<input id="reg-name" class="border-input" type="text" placeholder="请输入姓名">
+				</div>
+				<p class="name-error error">用户名不能为空</p>
+				<div class="box-item">
+					<label>性&nbsp;&nbsp;&nbsp;&nbsp;别：</label>
+					<label><input class="reg-sex" type="radio" name="sex" checked="checked" value="1" >男</label>
+					<label><input class="reg-sex" type="radio" name="sex" value="0" >女</label>
+				</div>
+				<div class="box-item">
+					<label for="reg-phone">手机号：</label>
+					<input id="reg-phone" class="border-input" type="text" placeholder="请输入手机号">	
+				</div>
+				<p class="phone-error error">请输入11位手机号</p>
+				<div class="box-item">
+					<label for="reg-pass">密&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+					<input  id="reg-pass" class="border-input" type="password" placeholder="请设置密码,6-16位">
+				</div>
+				<p class="pass-error error">请输入6-16位的密码</p>
+				<div class="box-btn go-yzm">下一步</div>
+				
+			</div>
+			<div class="box-some">
+				<a class="left go-log" href="javascript:;">&lt;返回登录</a>
+			</div>
+		</div>
+	</div>
+	<div id="yzmbox" class="alertbox">
+		<div class="box-head">注册</div>
+		<div class="box-main">
+			<div class="box-wrap">
+				<p class="box-info">为了安全，我们会给你发送短信验证码</p>
+				<div class="box-item">
+					<input id="reg-yzm" class="border-input" type="text" placeholder="请输入验证码">
+					<span class="last-time">00:59</span>
+					<a class="get-yz" href="javascript:;">重新发送</a>
+				</div>
+				<p class="yzm-error error">请输入正确的验证码</p>
+				<div class="box-btn" id="zc-succ">开启云音乐</div>
+			</div>
+			<div class="box-some">
+				<a class="left go-log" href="javascript:;">&lt;返回登录</a>
+			</div>
+		</div>
+	</div>
+	<audio src="" id="audio"></audio>
+</body>
+</html>
