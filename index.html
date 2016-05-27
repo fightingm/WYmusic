@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="css/common.css">
 	<link rel="stylesheet" href="css/index.css">
 	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/common.js"></script>
 	<script src="js/index.js"></script>
 </head>
 <body>
@@ -16,7 +17,7 @@
 			<div class="logo">智能推荐云音乐</div>
 			<nav class="classify">
 				<div class="item-wrap active">
-					<a class="nav-item" href="javascript:;">发现音乐</a>
+					<a class="nav-item" href="index.html">发现音乐</a>
 					<i class="fa fa-caret-up fa-lg" aria-hidden="true"></i>
 				</div>
 				<div class="item-wrap">
@@ -80,98 +81,10 @@
 							<a href="javascript:;" class="rcmd-i">电子</a>
 						</div>
 						<i class="fa fa-arrow-right" aria-hidden="true"></i>
-						<a href="javascript:;" class="more">更多</a>
+						<a href="playlist.html?type=all" class="more">更多</a>
 					</div>
 					<div class="rcmd-list">
-						<ul class="song-list">
-							<li class="rcmd-item">
-								<div class="list-cover">
-									<img src="imgs/rcmd1.jpg" alt="">
-									<div class="bottom">
-										<i class="fa fa-headphones fa-lg" aria-hidden="true"></i>
-										<span class="num">33万</span>
-										<i class="fa fa-play-circle-o fa-lg" aria-hidden="true"></i>
-									</div>
-								</div>
-								<p class="song-info">夏日烦闷，不如回家养花种菜捕鱼</p>
-							</li>
-							<li class="rcmd-item">
-								<div class="list-cover">
-									<img src="imgs/rcmd1.jpg" alt="">
-									<div class="bottom">
-										<i class="fa fa-headphones fa-lg" aria-hidden="true"></i>
-										<span class="num">33万</span>
-										<i class="fa fa-play-circle-o fa-lg" aria-hidden="true"></i>
-									</div>
-								</div>
-								<p class="song-info">夏日烦闷，不如回家养花种菜捕鱼</p>
-							</li>
-							<li class="rcmd-item">
-								<div class="list-cover">
-									<img src="imgs/rcmd1.jpg" alt="">
-									<div class="bottom">
-										<i class="fa fa-headphones fa-lg" aria-hidden="true"></i>
-										<span class="num">33万</span>
-										<i class="fa fa-play-circle-o fa-lg" aria-hidden="true"></i>
-									</div>
-								</div>
-								<p class="song-info">夏日烦闷，不如回家养花种菜捕鱼</p>
-							</li>
-							<li class="rcmd-item">
-								<div class="list-cover">
-									<img src="imgs/rcmd1.jpg" alt="">
-									<div class="bottom">
-										<i class="fa fa-headphones fa-lg" aria-hidden="true"></i>
-										<span class="num">33万</span>
-										<i class="fa fa-play-circle-o fa-lg" aria-hidden="true"></i>
-									</div>
-								</div>
-								<p class="song-info">夏日烦闷，不如回家养花种菜捕鱼</p>
-							</li>
-							<li class="rcmd-item">
-								<div class="list-cover">
-									<img src="imgs/rcmd1.jpg" alt="">
-									<div class="bottom">
-										<i class="fa fa-headphones fa-lg" aria-hidden="true"></i>
-										<span class="num">33万</span>
-										<i class="fa fa-play-circle-o fa-lg" aria-hidden="true"></i>
-									</div>
-								</div>
-								<p class="song-info">夏日烦闷，不如回家养花种菜捕鱼</p>
-							</li>
-							<li class="rcmd-item">
-								<div class="list-cover">
-									<img src="imgs/rcmd1.jpg" alt="">
-									<div class="bottom">
-										<i class="fa fa-headphones fa-lg" aria-hidden="true"></i>
-										<span class="num">33万</span>
-										<i class="fa fa-play-circle-o fa-lg" aria-hidden="true"></i>
-									</div>
-								</div>
-								<p class="song-info">夏日烦闷，不如回家养花种菜捕鱼</p>
-							</li>
-							<li class="rcmd-item">
-								<div class="list-cover">
-									<img src="imgs/rcmd1.jpg" alt="">
-									<div class="bottom">
-										<i class="fa fa-headphones fa-lg" aria-hidden="true"></i>
-										<span class="num">33万</span>
-										<i class="fa fa-play-circle-o fa-lg" aria-hidden="true"></i>
-									</div>
-								</div>
-								<p class="song-info">夏日烦闷，不如回家养花种菜捕鱼</p>
-							</li>
-							<li class="rcmd-item">
-								<div class="list-cover">
-									<img src="imgs/rcmd1.jpg" alt="">
-									<div class="bottom">
-										<i class="fa fa-headphones fa-lg" aria-hidden="true"></i>
-										<span class="num">33万</span>
-										<i class="fa fa-play-circle-o fa-lg" aria-hidden="true"></i>
-									</div>
-								</div>
-								<p class="song-info">夏日烦闷，不如回家养花种菜捕鱼</p>
-							</li>
+						<ul id="rcmd-list" class="song-list">
 						</ul>
 					</div>
 				</section>
@@ -190,86 +103,11 @@
 							<i class="fa fa-chevron-right fa-lg next-group" aria-hidden="true"></i>
 						</a>
 						<div class="disk-roll">
-							<ul class="disk-group">
-								<li class="disk-item">
-									<img src="imgs/disk1.jpg" alt="">
-									<p class="song-info">周杰伦 世界巡回演唱会</p>
-									<p class="song-author">周杰伦</p>
-								</li>
-								<li class="disk-item">
-									<img src="imgs/disk1.jpg" alt="">
-									<p class="song-info">周杰伦 世界巡回演唱会</p>
-									<p class="song-author">周杰伦</p>
-								</li>
-								<li class="disk-item">
-									<img src="imgs/disk1.jpg" alt="">
-									<p class="song-info">周杰伦 世界巡回演唱会</p>
-									<p class="song-author">周杰伦</p>
-								</li>
-								<li class="disk-item">
-									<img src="imgs/disk1.jpg" alt="">
-									<p class="song-info">周杰伦 世界巡回演唱会</p>
-									<p class="song-author">周杰伦</p>
-								</li>
-								<li class="disk-item">
-									<img src="imgs/disk1.jpg" alt="">
-									<p class="song-info">周杰伦 世界巡回演唱会</p>
-									<p class="song-author">周杰伦</p>
-								</li>
+							<ul id="disk-group1" class="disk-group">
 							</ul>
-							<ul class="disk-group">
-								<li class="disk-item">
-									<img src="imgs/disk2.jpg" alt="">
-									<p class="song-info">周杰伦 世界巡回演唱会</p>
-									<p class="song-author">周杰伦</p>
-								</li>
-								<li class="disk-item">
-									<img src="imgs/disk2.jpg" alt="">
-									<p class="song-info">周杰伦 世界巡回演唱会</p>
-									<p class="song-author">周杰伦</p>
-								</li>
-								<li class="disk-item">
-									<img src="imgs/disk2.jpg" alt="">
-									<p class="song-info">周杰伦 世界巡回演唱会</p>
-									<p class="song-author">周杰伦</p>
-								</li>
-								<li class="disk-item">
-									<img src="imgs/disk2.jpg" alt="">
-									<p class="song-info">周杰伦 世界巡回演唱会</p>
-									<p class="song-author">周杰伦</p>
-								</li>
-								<li class="disk-item">
-									<img src="imgs/disk2.jpg" alt="">
-									<p class="song-info">周杰伦 世界巡回演唱会</p>
-									<p class="song-author">周杰伦</p>
-								</li>
+							<ul id="disk-group2" class="disk-group">
 							</ul>
-							<ul class="disk-group">
-								<li class="disk-item">
-									<img src="imgs/disk3.jpg" alt="">
-									<p class="song-info">周杰伦 世界巡回演唱会</p>
-									<p class="song-author">周杰伦</p>
-								</li>
-								<li class="disk-item">
-									<img src="imgs/disk3.jpg" alt="">
-									<p class="song-info">周杰伦 世界巡回演唱会</p>
-									<p class="song-author">周杰伦</p>
-								</li>
-								<li class="disk-item">
-									<img src="imgs/disk3.jpg" alt="">
-									<p class="song-info">周杰伦 世界巡回演唱会</p>
-									<p class="song-author">周杰伦</p>
-								</li>
-								<li class="disk-item">
-									<img src="imgs/disk3.jpg" alt="">
-									<p class="song-info">周杰伦 世界巡回演唱会</p>
-									<p class="song-author">周杰伦</p>
-								</li>
-								<li class="disk-item">
-									<img src="imgs/disk3.jpg" alt="">
-									<p class="song-info">周杰伦 世界巡回演唱会</p>
-									<p class="song-author">周杰伦</p>
-								</li>
+							<ul id="disk-group3" class="disk-group">
 							</ul>
 						</div>
 						
@@ -297,100 +135,7 @@
 										</p>
 									</div>
 								</div>
-								<div class="bd-con">
-									<p class="bd-con-i top-3">
-										<span class="song-num">1</span>
-										<span class="song-name">初学者</span>
-										<span class="song-operate">
-											<i class="fa fa-play-circle-o fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-plus fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-star-o fa-lg" aria-hidden="true"></i>
-										</span>
-									</p>
-									<p class="bd-con-i top-3">
-										<span class="song-num">2</span>
-										<span class="song-name">画</span>
-										<span class="song-operate">
-											<i class="fa fa-play-circle-o fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-plus fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-star-o fa-lg" aria-hidden="true"></i>
-										</span>
-									</p>
-									<p class="bd-con-i top-3">
-										<span class="song-num">3</span>
-										<span class="song-name">Wherever I Go</span>
-										<span class="song-operate">
-											<i class="fa fa-play-circle-o fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-plus fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-star-o fa-lg" aria-hidden="true"></i>
-										</span>
-									</p>
-									<p class="bd-con-i">
-										<span class="song-num">4</span>
-										<span class="song-name">Wherever I Go</span>
-										<span class="song-operate">
-											<i class="fa fa-play-circle-o fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-plus fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-star-o fa-lg" aria-hidden="true"></i>
-										</span>
-									</p>
-									<p class="bd-con-i">
-										<span class="song-num">5</span>
-										<span class="song-name">Wherever I Go</span>
-										<span class="song-operate">
-											<i class="fa fa-play-circle-o fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-plus fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-star-o fa-lg" aria-hidden="true"></i>
-										</span>
-									</p>
-									<p class="bd-con-i">
-										<span class="song-num">6</span>
-										<span class="song-name">Wherever I Go</span>
-										<span class="song-operate">
-											<i class="fa fa-play-circle-o fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-plus fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-star-o fa-lg" aria-hidden="true"></i>
-										</span>
-									</p>
-									<p class="bd-con-i">
-										<span class="song-num">7</span>
-										<span class="song-name">Wherever I Go</span>
-										<span class="song-operate">
-											<i class="fa fa-play-circle-o fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-plus fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-star-o fa-lg" aria-hidden="true"></i>
-										</span>
-									</p>
-									<p class="bd-con-i">
-										<span class="song-num">8</span>
-										<span class="song-name">Wherever I Go</span>
-										<span class="song-operate">
-											<i class="fa fa-play-circle-o fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-plus fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-star-o fa-lg" aria-hidden="true"></i>
-										</span>
-									</p>
-									<p class="bd-con-i">
-										<span class="song-num">9</span>
-										<span class="song-name">Wherever I Go Wherever I Go Wherever I Go Wherever I Go</span>
-										<span class="song-operate">
-											<i class="fa fa-play-circle-o fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-plus fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-star-o fa-lg" aria-hidden="true"></i>
-										</span>
-									</p>
-									<p class="bd-con-i">
-										<span class="song-num">10</span>
-										<span class="song-name">Wherever I Go</span>
-										<span class="song-operate">
-											<i class="fa fa-play-circle-o fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-plus fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-star-o fa-lg" aria-hidden="true"></i>
-										</span>
-									</p>
-									<p class="bd-con-i">
-										<span class="show-all">查看全部&gt;</span>
-									</p>
+								<div id="bd-hot" class="bd-con">
 								</div>
 							</div>
 						</div>
@@ -408,100 +153,7 @@
 										</p>
 									</div>
 								</div>
-								<div class="bd-con">
-									<p class="bd-con-i top-3">
-										<span class="song-num">1</span>
-										<span class="song-name">初学者</span>
-										<span class="song-operate">
-											<i class="fa fa-play-circle-o fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-plus fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-star-o fa-lg" aria-hidden="true"></i>
-										</span>
-									</p>
-									<p class="bd-con-i top-3">
-										<span class="song-num">2</span>
-										<span class="song-name">画</span>
-										<span class="song-operate">
-											<i class="fa fa-play-circle-o fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-plus fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-star-o fa-lg" aria-hidden="true"></i>
-										</span>
-									</p>
-									<p class="bd-con-i top-3">
-										<span class="song-num">3</span>
-										<span class="song-name">Wherever I Go</span>
-										<span class="song-operate">
-											<i class="fa fa-play-circle-o fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-plus fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-star-o fa-lg" aria-hidden="true"></i>
-										</span>
-									</p>
-									<p class="bd-con-i">
-										<span class="song-num">4</span>
-										<span class="song-name">Wherever I Go</span>
-										<span class="song-operate">
-											<i class="fa fa-play-circle-o fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-plus fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-star-o fa-lg" aria-hidden="true"></i>
-										</span>
-									</p>
-									<p class="bd-con-i">
-										<span class="song-num">5</span>
-										<span class="song-name">Wherever I Go</span>
-										<span class="song-operate">
-											<i class="fa fa-play-circle-o fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-plus fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-star-o fa-lg" aria-hidden="true"></i>
-										</span>
-									</p>
-									<p class="bd-con-i">
-										<span class="song-num">6</span>
-										<span class="song-name">Wherever I Go</span>
-										<span class="song-operate">
-											<i class="fa fa-play-circle-o fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-plus fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-star-o fa-lg" aria-hidden="true"></i>
-										</span>
-									</p>
-									<p class="bd-con-i">
-										<span class="song-num">7</span>
-										<span class="song-name">Wherever I Go</span>
-										<span class="song-operate">
-											<i class="fa fa-play-circle-o fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-plus fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-star-o fa-lg" aria-hidden="true"></i>
-										</span>
-									</p>
-									<p class="bd-con-i">
-										<span class="song-num">8</span>
-										<span class="song-name">Wherever I Go</span>
-										<span class="song-operate">
-											<i class="fa fa-play-circle-o fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-plus fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-star-o fa-lg" aria-hidden="true"></i>
-										</span>
-									</p>
-									<p class="bd-con-i">
-										<span class="song-num">9</span>
-										<span class="song-name">Wherever I Go Wherever I Go Wherever I Go Wherever I Go</span>
-										<span class="song-operate">
-											<i class="fa fa-play-circle-o fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-plus fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-star-o fa-lg" aria-hidden="true"></i>
-										</span>
-									</p>
-									<p class="bd-con-i">
-										<span class="song-num">10</span>
-										<span class="song-name">Wherever I Go</span>
-										<span class="song-operate">
-											<i class="fa fa-play-circle-o fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-plus fa-lg" aria-hidden="true"></i>
-											<i class="fa fa-star-o fa-lg" aria-hidden="true"></i>
-										</span>
-									</p>
-									<p class="bd-con-i">
-										<span class="show-all">查看全部&gt;</span>
-									</p>
+								<div id="bd-new" class="bd-con">
 								</div>
 							</div>
 						</div>
@@ -518,97 +170,7 @@
 						<h3>热门歌手</h3>
 						<span>查看全部&gt;</span>
 					</div>
-					<ul>
-						<li>
-							<div class="singer-img">
-								<img src="imgs/singer1.jpg" alt="">
-							</div>
-							<div class="singer-info">
-								<h2>马頔麻油叶</h2>
-								<p>民谣音乐人</p>
-							</div>
-						</li>
-						<li>
-							<div class="singer-img">
-								<img src="imgs/singer1.jpg" alt="">
-							</div>
-							<div class="singer-info">
-								<h2>马頔麻油叶</h2>
-								<p>民谣音乐人</p>
-							</div>
-						</li>
-						<li>
-							<div class="singer-img">
-								<img src="imgs/singer1.jpg" alt="">
-							</div>
-							<div class="singer-info">
-								<h2>马頔麻油叶</h2>
-								<p>民谣音乐人</p>
-							</div>
-						</li>
-						<li>
-							<div class="singer-img">
-								<img src="imgs/singer1.jpg" alt="">
-							</div>
-							<div class="singer-info">
-								<h2>马頔麻油叶</h2>
-								<p>民谣音乐人</p>
-							</div>
-						</li>
-						<li>
-							<div class="singer-img">
-								<img src="imgs/singer1.jpg" alt="">
-							</div>
-							<div class="singer-info">
-								<h2>马頔麻油叶</h2>
-								<p>民谣音乐人</p>
-							</div>
-						</li>
-						<li>
-							<div class="singer-img">
-								<img src="imgs/singer1.jpg" alt="">
-							</div>
-							<div class="singer-info">
-								<h2>马頔麻油叶</h2>
-								<p>民谣音乐人</p>
-							</div>
-						</li>
-						<li>
-							<div class="singer-img">
-								<img src="imgs/singer1.jpg" alt="">
-							</div>
-							<div class="singer-info">
-								<h2>马頔麻油叶</h2>
-								<p>民谣音乐人</p>
-							</div>
-						</li>
-						<li>
-							<div class="singer-img">
-								<img src="imgs/singer1.jpg" alt="">
-							</div>
-							<div class="singer-info">
-								<h2>马頔麻油叶</h2>
-								<p>民谣音乐人</p>
-							</div>
-						</li>
-						<li>
-							<div class="singer-img">
-								<img src="imgs/singer1.jpg" alt="">
-							</div>
-							<div class="singer-info">
-								<h2>马頔麻油叶马頔麻油叶</h2>
-								<p>民谣音乐人马頔麻油叶马頔麻油叶</p>
-							</div>
-						</li>
-						<li>
-							<div class="singer-img">
-								<img src="imgs/singer1.jpg" alt="">
-							</div>
-							<div class="singer-info">
-								<h2>马頔麻油叶</h2>
-								<p>民谣音乐人</p>
-							</div>
-						</li>
+					<ul id="singer-list">
 					</ul>
 				</div>
 			</div>
@@ -618,26 +180,26 @@
 		<div class="wrap">
 			<div class="play-control">
 				<i class="fa fa-step-backward fa-lg" aria-hidden="true"></i>
-				<i class="fa fa-play-circle-o fa-2x" aria-hidden="true"></i>
+				<i class="fa fa-play-circle-o fa-2x" id="pause" aria-hidden="true"></i>
 				<i class="fa fa-step-forward fa-lg" aria-hidden="true"></i>
 			</div>
 			<div class="play-img">
-				<img src="imgs/play1.jpg" alt="">
+				<img id="playing-author-img" src="imgs/play1.jpg" alt="">
 			</div>
 			<div class="play">
 				<div class="words">
-					<span>初学者</span>
-					<span>薛之谦</span>
+					<span id="playing-song">初学者</span>
+					<span id="playing-author-name">薛之谦</span>
 				</div>
 				<div class="pbar">
-					<div class="cur">
+					<div id="cur-pro" class="cur">
 						<i class="fa fa-dot-circle-o" aria-hidden="true"></i>
 					</div>
 				</div>
 			</div>
 			<div class="ptime">
-				<span class="curtime">02:08</span>/
-				<span class="alltime">04:40</span>
+				<span id="playing-song-now" class="curtime">00:00</span>/
+				<span id="playing-song-last" class="alltime">00:00</span>
 			</div>
 			<div class="voice">
 				<i class="fa fa-volume-up fa-lg" aria-hidden="true"></i>
@@ -662,7 +224,7 @@
 				</div>
 				<p class="log-phone-error error">请输入11位手机号</p>
 				<div class="box-item">
-					<input id="log-pass" class="border-input" type="text" placeholder="请输入密码">
+					<input id="log-pass" class="border-input" type="password" placeholder="请输入密码">
 				</div>
 				<p class="log-pass-error error">请输入密码</p>
 				<div id="do-login" class="box-btn">登录</div>
@@ -695,7 +257,7 @@
 				<p class="phone-error error">请输入11位手机号</p>
 				<div class="box-item">
 					<label for="reg-pass">密&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
-					<input  id="reg-pass" class="border-input" type="text" placeholder="请设置密码,6-16位">
+					<input  id="reg-pass" class="border-input" type="password" placeholder="请设置密码,6-16位">
 				</div>
 				<p class="pass-error error">请输入6-16位的密码</p>
 				<div class="box-btn go-yzm">下一步</div>
@@ -724,5 +286,6 @@
 			</div>
 		</div>
 	</div>
+	<audio src="" id="audio"></audio>
 </body>
 </html>

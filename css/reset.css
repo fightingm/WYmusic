@@ -24,7 +24,7 @@ ol, ul {
 	color:#666;
 	list-style: none;
 }
-address, caption, cite, code, dfn, em, strong, th, var {
+address, caption, cite, code, dfn, em, strong, th, var, i{
     font-weight: normal;
     font-style: normal;
 }
