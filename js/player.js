@@ -14,7 +14,9 @@ $(function(){
 	var $singerName=$('.singer-name');
 	var $singerDesc=$('#singer-desc');
 	var $singerImg=$('#singer-img');
+	var $playList=$('#play-list');
 	getData();
+	getAlbum();
 	function getData(){
 		$.get('http://115.28.238.193:8080/music/singer/'+singerId,function(data){
 			if(data.status==200){
@@ -39,6 +41,24 @@ $(function(){
 				}
 				$tableData.html(str);
 			}
+		});
+	}
+	function getAlbum(){
+		$.get('http://115.28.238.193:8080/music/album/'+singerId,function(data){
+			var str='';
+			for(var i=0;i<data.data.length;i++){
+				str+='<li class="rcmd-item">\
+						<div class="list-cover">\
+							<img src='+data.data[i].albumPic+' alt="">\
+							<div class="bottom">\
+								<i class="fa fa-headphones fa-lg" aria-hidden="true"></i>\
+								<i class="fa fa-play-circle fa-lg" aria-hidden="true"></i>\
+							</div>\
+						</div>\
+						<div class="song-info">'+data.data[i].albumName+'</div>\
+					</li>'
+			}
+			$playList.html(str);
 		});
 	}
 });

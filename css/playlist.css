@@ -8,6 +8,33 @@
 	margin-left: 50px;
 	float: left;
 }
+/*m-page*/
+.m-page{
+	text-align: center;
+	margin: 20px 0;
+}
+.m-page a{
+	height: 22px;
+	padding: 0 8px;
+	line-height: 22px;
+	border:1px solid #ccc;
+	border-radius: 3px;
+	margin: 0 5px;
+	display: inline-block;
+}
+.m-page .active{
+	background: #c00;
+	color:#fff;
+}
+.page-next,.page-prev{
+	background: #f7f7f7;
+}
+.m-page .default{
+	background: #f3f3f3;
+	color: #cacaca;
+	cursor: default;
+}
+/*m-page*/
 .list-con{
 	padding: 20px 40px 40px;
 }
