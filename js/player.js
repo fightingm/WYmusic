@@ -15,6 +15,9 @@ $(function(){
 	var $singerDesc=$('#singer-desc');
 	var $singerImg=$('#singer-img');
 	var $playList=$('#play-list');
+	var $showLog=$('#show-log');
+	var $userHome=$('#user-home');
+	setLog();
 	getData();
 	getAlbum();
 	function getData(){
@@ -60,5 +63,12 @@ $(function(){
 			}
 			$playList.html(str);
 		});
+	}
+	function setLog(){
+		var uname=getCookie('name');
+		if(uname!=""){
+			$showLog.hide();
+			$userHome.show().html(uname);
+		}
 	}
 });

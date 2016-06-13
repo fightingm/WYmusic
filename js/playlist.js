@@ -1,4 +1,4 @@
-
+ 
 
 $(function(){
 
@@ -8,13 +8,22 @@ $(function(){
 	var $pageI=$('.page-i');
 	var $pagePrev=$('.page-prev');
 	var $pageNext=$('.page-next');
-	var type=location.search.split('=')[1];
+	var type=getProps(location.href,'type');
 	var totalLen=0;
 	var eachPage=35;
 	var allPage=1;
 	var curPage=1;
 	var flag=true;
-	$.get('http://115.28.238.193:8080/music/music/length',function(data){
+	var $showLog=$('#show-log');
+	var $userHome=$('#user-home');
+	var lengthUrl="";
+	setLog();
+	if(type==""){
+		lengthUrl='http://115.28.238.193:8080/music/music/length';
+	}else{
+		lengthUrl='http://115.28.238.193:8080/music/music/type/length/'+type;
+	}
+	$.get(lengthUrl,function(data){
 		totalLen=data.data.length;
 		allPage=Math.ceil(totalLen/eachPage);
 		setPage(1,allPage);
@@ -56,9 +65,15 @@ $(function(){
 	}
 	function getData(cur){
 		flag=false;
+		var url="";
+		if(type==''){
+			url='http://115.28.238.193:8080/music/music?page='+(cur-1)+'&limit=35';
+		}else{
+			url='http://115.28.238.193:8080/music/music/type/'+type+'?page='+(cur-1)+'&limit=35';
+		}
 		$.ajax({
 			type:'GET',
-			url:'http://115.28.238.193:8080/music/music?page='+(cur-1)+'&limit=35',
+			url:url,
 			success:function(data){
 				var str='';
 				for(var i=0;i<data.data.length;i++){
@@ -117,6 +132,33 @@ $(function(){
 			
 		});
 	}
+	(function(){
+		var $voiceShow=$('#voice-show');
+		var $voiceControl=$('.voice-control');
+		var flag=true;
+		$voiceShow.click(function(){
+			if(flag){
+				$voiceControl.show();
+			}else{
+				$voiceControl.hide();
+			}
+			flag=!flag;
+		});
+	})();
+	
+	var $curVoice=$('#cur-voice');
+	var $voiceFa=$('#voice-fa');
+	startDrag({
+		bar:$voiceFa.get(0),
+		target:$voiceFa.get(0),
+		dir:['top',0,84],
+		callback:function(l,t){
+			var n=Math.floor(t*100/84);
+			var per=100-n;
+			$curVoice.css('height',per+'%');
+			audio.volume=per*0.01;
+		}
+	});
 	function setPV(id){
 		$.ajax({
 			type:'POST',
@@ -149,5 +191,13 @@ $(function(){
 		var procress=curtime*100/alltime+'%';
 		$playingSongNow.html(toTime(curtime));
 		$curPro.width(procress);
+	}
+
+	function setLog(){
+		var uname=getCookie('name');
+		if(uname!=""){
+			$showLog.hide();
+			$userHome.show().html(uname);
+		}
 	}
 });

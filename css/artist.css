@@ -1,0 +1,30 @@
+
+/*play-list*/
+.play-list{
+	margin-left: -50px;
+	overflow: hidden;
+}
+.rcmd-item{
+	margin-left: 50px;
+	float: left;
+}
+.line{
+	height: 1px;
+	background: #999;
+	clear: both;
+	margin-left: 50px;
+	margin-bottom: 20px;
+}
+.sml{
+	height: 30px;
+	width: 130px;
+	padding-bottom: 0;
+	line-height: 23px;
+	margin-left: 50px;
+	float: left;
+	text-align: center;
+}
+.list-con{
+	padding: 20px 40px 40px;
+}
+/*play-list*/

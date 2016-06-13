@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>智能推荐云音乐</title>
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/common.css">
@@ -14,27 +14,32 @@
 <body>
 	<header class="header">
 		<div class="wrap">
-			<div class="logo">智能推荐云音乐</div>
+			<div class="logo">
+				<img src="imgs/logo.png" alt="">
+				智能推荐云音乐
+			</div>
 			<nav class="classify">
 				<div class="item-wrap active">
 					<a class="nav-item" href="index.html">发现音乐</a>
 					<i class="fa fa-caret-up fa-lg" aria-hidden="true"></i>
 				</div>
 				<div class="item-wrap">
-					<a class="nav-item" href="javascript:;">我的音乐</a>
+					<a class="nav-item" href="mymusic.html">我的音乐</a>
 				</div>
 				<div class="item-wrap">
-					<a class="nav-item" href="javascript:;">朋友</a>
-				</div>
-				<div class="item-wrap">
-					<a class="nav-item" href="javascript:;">下载客户端</a>
+					<a class="nav-item" href="album.html">新碟上架</a>
 				</div>
 			</nav>
 			<div class="login">
 				<a id="show-log" class="link" href="javascript:;">登录</a>
 				<a id="user-home" class="link" href="javascript:;">aaaaaaaaaa</a>
 				<i class="fa fa-sort-desc fa-lg logicon" aria-hidden="true"></i>
+				<ul class="exit">
+					<li><a href="mymusic.html">我的音乐</a></li>
+					<li><a id="to-exit" href="javascript:;">退出登录</a></li>
+				</ul>
 			</div>
+			
 			<div class="search">
 				<i class="fa fa-search" aria-hidden="true"></i>
 				<input class="ser-btn" type="text" placeholder="单曲/歌手/专辑/歌单/MV用户">
@@ -45,11 +50,9 @@
 		<div class="wrap">
 			<nav class="list">
 				<a class="list-item active" href="javascript:;">推荐</a>
-				<a class="list-item" href="javascript:;">排行榜</a>
-				<a class="list-item" href="javascript:;">歌单</a>
-				<a class="list-item" href="javascript:;">主播电台</a>
-				<a class="list-item" href="javascript:;">歌手</a>
-				<a class="list-item" href="javascript:;">新碟上架</a>
+				<a class="list-item" href="toplist.html">排行榜</a>
+				<a class="list-item" href="playlist.html">歌单</a>
+				<a class="list-item" href="artist.html">歌手</a>
 			</nav>
 		</div>
 	</div>
@@ -74,14 +77,14 @@
 						<i class="fa fa-circle-o fa-lg" aria-hidden="true"></i>
 						<h2 class="tit"><a href="javascript:;">热门推荐</a></h2>
 						<div class="tab">
-							<a href="javascript:;" class="rcmd-i">华语</a>
-							<a href="javascript:;" class="rcmd-i">流行</a>
-							<a href="javascript:;" class="rcmd-i">摇滚</a>
-							<a href="javascript:;" class="rcmd-i">民谣</a>
-							<a href="javascript:;" class="rcmd-i">电子</a>
+							<a href="playlist.html?type=100000" class="rcmd-i">华语</a>
+							<a href="playlist.html?type=1" class="rcmd-i">流行</a>
+							<a href="playlist.html?type=2" class="rcmd-i">摇滚</a>
+							<a href="playlist.html?type=3" class="rcmd-i">民谣</a>
+							<a href="playlist.html?type=4" class="rcmd-i">电子</a>
 						</div>
 						<i class="fa fa-arrow-right" aria-hidden="true"></i>
-						<a href="playlist.html?type=all" class="more">更多</a>
+						<a href="playlist.html" class="more">更多</a>
 					</div>
 					<div class="rcmd-list">
 						<ul id="rcmd-list" class="song-list">
@@ -93,7 +96,7 @@
 						<i class="fa fa-circle-o fa-lg" aria-hidden="true"></i>
 						<h2 class="tit"><a href="javascript:;">新碟上架</a></h2>
 						<i class="fa fa-arrow-right" aria-hidden="true"></i>
-						<a href="javascript:;" class="more">更多</a>
+						<a href="album.html" class="more">更多</a>
 					</div>
 					<div class="disk-list">
 						<a id="pre-disk" href="javascript:;">
@@ -118,7 +121,7 @@
 						<i class="fa fa-circle-o fa-lg" aria-hidden="true"></i>
 						<h2 class="tit"><a href="javascript:;">榜单</a></h2>
 						<i class="fa fa-arrow-right" aria-hidden="true"></i>
-						<a href="javascript:;" class="more">更多</a>
+						<a href="toplist.html" class="more">更多</a>
 					</div>
 					<div class="bd-list">
 						<div class="bd-group">
@@ -163,7 +166,7 @@
 			<div class="right-con">
 				<div class="log-area">
 					<p>登录智能推荐云音乐，可以享受无限收藏的乐趣，并且无限同步到手机</p>
-					<a href="javascript:;">用户登录</a>
+					<a id="show-log2" href="javascript:;">用户登录</a>
 				</div>
 				<div class="singer-list">
 					<div class="singer-tit">
@@ -205,9 +208,8 @@
 				<i class="fa fa-volume-up fa-lg" aria-hidden="true"></i>
 				<div class="voice-control">
 					<div class="all">
-						<div class="cur">
-							<i class="fa fa-dot-circle-o" aria-hidden="true"></i>
-						</div>
+						<i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+						<div class="cur"></div>
 					</div>
 					
 				</div>

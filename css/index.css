@@ -1,5 +1,6 @@
 
 
+
 /*--banner*/
 .banner{
 	background: #062335;
@@ -186,6 +187,10 @@
 }
 .song-operate .fa{
 	margin-right:8px;
+	cursor: pointer;
+}
+.song-operate .fa-heart{
+	color: #c40c0c;
 }
 .show-all{
 	float: right;
@@ -205,6 +210,7 @@
 	padding-top: 126px;
 }
 .log-area{
+	width: 250px;
 	height: 126px;
 	background: -webkit-linear-gradient(to bottom,#fdfdfd,#e2e2e2);
 	background: linear-gradient(to bottom,#fdfdfd,#e2e2e2);
@@ -212,10 +218,14 @@
 	left: 0;
 	top: 0;
 	padding: 0 20px;
+	box-sizing:border-box;
 }
 .log-area p{
 	padding:16px 0;
 	line-height: 22px;
+}
+.log-area .user-name{
+	color: #0c73c2;
 }
 .log-area a{
 	display: block;
@@ -226,8 +236,8 @@
     color: #fff;
     text-shadow: 0 1px 0 #8a060b;
     margin: 0 auto;
-    background: -webkit-linear-gradient(to bottom,#E41820,#BB060B);
-	background: linear-gradient(to bottom,#E41820,#BB060B);
+    background: -webkit-linear-gradient(to bottom,#5EA7EB,#1C6EBE);
+	background: linear-gradient(to bottom,#5EA7EB,#1C6EBE);
 	border-radius: 5px;
 }
 .singer-list{

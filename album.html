@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>全部歌曲</title>
+	<title>新碟上架</title>
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/common.css">
-	<link rel="stylesheet" href="css/playlist.css">
+	<link rel="stylesheet" href="css/album.css">
 	<script src="js/jquery-1.11.3.min.js"></script>
 	<script src="js/common.js"></script>
-	<script src="js/playlist.js"></script>
+	<script src="js/album.js"></script>
 </head>
 <body>
 	<header class="header">
@@ -19,15 +19,15 @@
 				智能推荐云音乐
 			</div>
 			<nav class="classify">
-				<div class="item-wrap active">
+				<div class="item-wrap">
 					<a class="nav-item" href="index.html">发现音乐</a>
 					<i class="fa fa-caret-up fa-lg" aria-hidden="true"></i>
 				</div>
 				<div class="item-wrap">
 					<a class="nav-item" href="mymusic.html">我的音乐</a>
 				</div>
-				<div class="item-wrap">
-					<a class="nav-item" href="album.html">新碟上架</a>
+				<div class="item-wrap active">
+					<a class="nav-item" href="javascript:;">新碟上架</a>
 				</div>
 			</nav>
 			<div class="login">
@@ -57,7 +57,7 @@
 				<section>
 					<div class="rcmd-h">
 						<i class="fa fa-circle-o fa-lg" aria-hidden="true"></i>
-						<h2 class="tit"><a href="javascript:;">全部</a></h2>
+						<h2 class="tit"><a href="javascript:;">全部新碟</a></h2>
 					</div>
 					<div class="rcmd-list">
 						<ul class="play-list">
@@ -100,7 +100,7 @@
 				<span id="playing-song-last" class="alltime">00:00</span>
 			</div>
 			<div class="voice">
-				<i class="fa fa-volume-up fa-lg" id="voice-show" aria-hidden="true"></i>
+				<i class="fa fa-volume-up fa-lg" aria-hidden="true"></i>
 				<div class="voice-control">
 					<div class="all">
 						<i class="fa fa-dot-circle-o" id="voice-fa" aria-hidden="true"></i>

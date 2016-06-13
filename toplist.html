@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>歌手</title>
+	<title>排行榜</title>
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/common.css">
-	<link rel="stylesheet" href="css/player.css">
+	<link rel="stylesheet" href="css/toplist.css">
 	<script src="js/jquery-1.11.3.min.js"></script>
 	<script src="js/common.js"></script>
-	<script src="js/player.js"></script>
+	<script src="js/toplist.js"></script>
 </head>
 <body>
 	<header class="header">
@@ -45,8 +45,8 @@
 		<div class="wrap">
 			<nav class="list">
 				<a class="list-item" href="index.html">推荐</a>
-				<a class="list-item" href="toplist.html">排行榜</a>
-				<a class="list-item active" href="playlist.html">歌单</a>
+				<a class="list-item active" href="javascript:;">排行榜</a>
+				<a class="list-item" href="playlist.html">歌单</a>
 				<a class="list-item" href="artist.html">歌手</a>
 			</nav>
 		</div>
@@ -54,32 +54,43 @@
 	<div class="discover">
 		<div class="wrap">
 			<div class="left-con">
-				<section class="n-artist">
-					<img id="singer-img" src="" alt="">
-					<div class="btm">
-						<h2 class="singer-name"></h2>
+				<section>
+					<div class="m-info">
+						<div class="m-img">
+							<img id="album-img" src="imgs/bd1.jpg" alt="">
+						</div>
+						<div class="m-con">
+							<div class="m-con-c">
+								<div class="m-head">
+									<h2 id="album-tit" class="tit">云音乐飙升榜</h2>
+								</div>
+								<div class="m-singer-info">
+									<p>最近更新：<span>06月05日</span></p>
+								</div>
+								<div class="m-control">
+									<a class="play-icon con-icon" href="javascript:;">
+										<i class="fa fa-play-circle" aria-hidden="true"></i>播放
+									</a>
+									<a class="con-icon" href="javascript:;">
+										<i class="fa fa-heart-o" aria-hidden="true"></i>收藏
+									</a>
+									<a class="con-icon" href="javascript:;">
+										<i class="fa fa-download" aria-hidden="true"></i>下载
+									</a>
+									<a class="con-icon" href="javascript:;">
+										<i class="fa fa-commenting-o" aria-hidden="true"></i>评论
+									</a>
+								</div>
+							</div>
+						</div>
 					</div>
-				</section>
-				<nav class="m-tab">
-					<a class="active" href="javascript:;">
-						<span>热门50单曲</span>
-					</a>
-					<a href="javascript:;">
-						<span>所有专辑</span>
-					</a>
-					<a href="javascript:;">
-						<span>歌手介绍</span>
-					</a>
-				</nav>
-				
-				<section class="m-main active">
-					<div class="m-control">
-						<a class="play-icon con-icon" href="javascript:;">
-							<i class="fa fa-play-circle" aria-hidden="true"></i>播放
-						</a>
-						<a class="con-icon" href="javascript:;">
-							<i class="fa fa-heart-o" aria-hidden="true"></i>收藏
-						</a>
+					<div class="rcmd-h">
+						<i class="fa fa-circle-o fa-lg" aria-hidden="true"></i>
+						<h2 class="tit"><a href="javascript:;">歌曲列表</a></h2>
+						<div class="tab">
+							<span>280首歌</span>
+						</div>
+						<a href="playlist.html?type=all" class="more">播放：9999次</a>
 					</div>
 					<div class="table-list">
 						<table class="m-table">
@@ -104,137 +115,31 @@
 						</table>
 					</div>
 				</section>
-
-				<section class="m-main">
-					<div class="rcmd-list">
-						<ul id="play-list" class="play-list">
-							<li class="rcmd-item">
-								<div class="list-cover">
-									<img src="imgs/rcmd1.jpg" alt="">
-									<div class="bottom">
-										<i class="fa fa-headphones fa-lg" aria-hidden="true"></i>
-										<i class="fa fa-play-circle fa-lg" aria-hidden="true"></i>
-									</div>
-								</div>
-								<div class="song-info">aaaaa</div>
-							</li>
-							<li class="rcmd-item">
-								<div class="list-cover">
-									<img src="imgs/rcmd1.jpg" alt="">
-									<div class="bottom">
-										<i class="fa fa-headphones fa-lg" aria-hidden="true"></i>
-										<i class="fa fa-play-circle fa-lg" aria-hidden="true"></i>
-									</div>
-								</div>
-								<div class="song-info">aaaaa</div>
-							</li>
-							<li class="rcmd-item">
-								<div class="list-cover">
-									<img src="imgs/rcmd1.jpg" alt="">
-									<div class="bottom">
-										<i class="fa fa-headphones fa-lg" aria-hidden="true"></i>
-										<i class="fa fa-play-circle fa-lg" aria-hidden="true"></i>
-									</div>
-								</div>
-								<div class="song-info">aaaaa</div>
-							</li>
-							<li class="rcmd-item">
-								<div class="list-cover">
-									<img src="imgs/rcmd1.jpg" alt="">
-									<div class="bottom">
-										<i class="fa fa-headphones fa-lg" aria-hidden="true"></i>
-										<i class="fa fa-play-circle fa-lg" aria-hidden="true"></i>
-									</div>
-								</div>
-								<div class="song-info">aaaaa</div>
-							</li>
-							<li class="rcmd-item">
-								<div class="list-cover">
-									<img src="imgs/rcmd1.jpg" alt="">
-									<div class="bottom">
-										<i class="fa fa-headphones fa-lg" aria-hidden="true"></i>
-										<i class="fa fa-play-circle fa-lg" aria-hidden="true"></i>
-									</div>
-								</div>
-								<div class="song-info">aaaaa</div>
-							</li>
-							<li class="rcmd-item">
-								<div class="list-cover">
-									<img src="imgs/rcmd1.jpg" alt="">
-									<div class="bottom">
-										<i class="fa fa-headphones fa-lg" aria-hidden="true"></i>
-										<i class="fa fa-play-circle fa-lg" aria-hidden="true"></i>
-									</div>
-								</div>
-								<div class="song-info">aaaaa</div>
-							</li>
-							<li class="rcmd-item">
-								<div class="list-cover">
-									<img src="imgs/rcmd1.jpg" alt="">
-									<div class="bottom">
-										<i class="fa fa-headphones fa-lg" aria-hidden="true"></i>
-										<i class="fa fa-play-circle fa-lg" aria-hidden="true"></i>
-									</div>
-								</div>
-								<div class="song-info">aaaaa</div>
-							</li>
-							<li class="rcmd-item">
-								<div class="list-cover">
-									<img src="imgs/rcmd1.jpg" alt="">
-									<div class="bottom">
-										<i class="fa fa-headphones fa-lg" aria-hidden="true"></i>
-										<i class="fa fa-play-circle fa-lg" aria-hidden="true"></i>
-									</div>
-								</div>
-								<div class="song-info">aaaaa</div>
-							</li>
-							<li class="rcmd-item">
-								<div class="list-cover">
-									<img src="imgs/rcmd1.jpg" alt="">
-									<div class="bottom">
-										<i class="fa fa-headphones fa-lg" aria-hidden="true"></i>
-										<i class="fa fa-play-circle fa-lg" aria-hidden="true"></i>
-									</div>
-								</div>
-								<div class="song-info">aaaaa</div>
-							</li>
-							<li class="rcmd-item">
-								<div class="list-cover">
-									<img src="imgs/rcmd1.jpg" alt="">
-									<div class="bottom">
-										<i class="fa fa-headphones fa-lg" aria-hidden="true"></i>
-										<i class="fa fa-play-circle fa-lg" aria-hidden="true"></i>
-									</div>
-								</div>
-								<div class="song-info">aaaaa</div>
-							</li>
-						</ul>
-					</div>
-				</section>
-				<section class="m-main">
-					<div class="n-artdesc">
-						<h2>
-							<i>&nbsp;</i>
-							<span class="singer-name"></span>简介
-						</h2>
-						<p id="singer-desc"></p>
-					</div>
-				</section>
 			</div>
 			<div class="right-con">
-				<div class="listener-list">
-					<div class="listener-tit">
-						<h3>相似歌手</h3>
+				<div class="singer-list">
+					<div class="singer-tit">
+						<h3>云音乐特色榜</h3>
 					</div>
-					<ul class="m-piclist">
-						<li class="piclist-i"><img src="imgs/singer1.jpg" alt=""></li>
-						<li class="piclist-i"><img src="imgs/singer1.jpg" alt=""></li>
-						<li class="piclist-i"><img src="imgs/singer1.jpg" alt=""></li>
-						<li class="piclist-i"><img src="imgs/singer1.jpg" alt=""></li>
-						<li class="piclist-i"><img src="imgs/singer1.jpg" alt=""></li>
-						<li class="piclist-i"><img src="imgs/singer1.jpg" alt=""></li>
-						<li class="piclist-i"><img src="imgs/singer1.jpg" alt=""></li>
-						<li class="piclist-i"><img src="imgs/singer1.jpg" alt=""></li>
+					<ul>
+						<li id="hotTop" class="active">
+							<div class="singer-img">
+								<img src="imgs/bd1.jpg" alt="">
+							</div>
+							<div class="singer-info">
+								<h2>云音乐飙升榜</h2>
+								<p>每天更新</p>
+							</div>
+						</li>
+						<li id="newTop">
+							<div class="singer-img">
+								<img src="imgs/bd2.jpg" alt="">
+							</div>
+							<div class="singer-info">
+								<h2>云音乐新歌榜</h2>
+								<p>每天更新</p>
+							</div>
+						</li>
 					</ul>
 				</div>
 			</div>

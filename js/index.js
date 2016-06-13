@@ -1,7 +1,6 @@
 
 
 $(function(){
-
 	//专辑滚动
 	var $preDisk=$('#pre-disk');
 	var $nextDisk=$('#next-disk');
@@ -43,10 +42,15 @@ $(function(){
 
 	//弹出登录框
 	var $showLog=$('#show-log');
+	var $showLog2=$('#show-log2');
 	var $userHome=$('#user-home')
 	var $logBox=$('#logbox');
 	var $mask=$('#mask');
 	$showLog.click(function(){
+		$mask.show();
+		$logBox.show();
+	});
+	$showLog2.click(function(){
 		$mask.show();
 		$logBox.show();
 	});
@@ -74,6 +78,10 @@ $(function(){
 	var $logPass=$('#log-pass');
 	var $logPhoneErr=$('.log-phone-error');
 	var $logPassErr=$('.log-pass-error');
+	var $logArea=$('.log-area');
+	var utoken='';
+	var uid='';
+	setLog();
 	$doLogin.click(function(){
 		if(checkLog()){
 			$.ajax({
@@ -85,6 +93,19 @@ $(function(){
 						$showLog.hide();
 						$mask.hide();
 						$userHome.show().html(data.data.name);
+						$logArea.html('<p>亲爱的<span class="user-name">'+data.data.name+'：</span><br /><br />欢迎来到智能推荐云音乐!!!</p>');
+						utoken=data.data.accessToken;
+						uid=data.data.uid;
+						setCookie('name',data.data.name,7);
+						setCookie('token',utoken,7);
+						setCookie('uid',uid,7);
+						$('.bd-list').undelegate('.add-col','click');
+						$('.bd-list').delegate('.add-col','click',function(ev){
+							var mid=$(this).attr('data-id');
+							var tar=ev.target;
+							setCol(uid,mid,utoken,tar);
+						});
+						location.reload();
 					}else{
 						$logPassErr.show().html('密码不正确，请重新输入');
 					}
@@ -120,7 +141,18 @@ $(function(){
 		}
 		return flag;
 	}
-
+	var $toExit=$('#to-exit');
+	$toExit.click(function(){
+		clearCookie('name');
+		clearCookie('token');
+		clearCookie('uid');
+		console.log(123);
+		location.reload();
+	});
+	$userHome.hover(function(){
+		console.log(123);
+		$('.exit').show();
+	});
 
 	//注册相关
 	var $goYzm=$('.go-yzm');
@@ -389,38 +421,167 @@ $(function(){
 	function getBd(){
 		var str1='';
 		var str2='';
+		var token=getCookie('token');
+		var uid=getCookie('uid');
 		$.get('http://115.28.238.193:8080/music/music/hot?page=0&limit=10',function(data){
 			if(data.status==200){
-				for(var i=0;i<data.data.length;i++){
-					str1+='<p class="bd-con-i">\
-										<span class="song-num">'+(i+1)+'</span>\
-										<span class="song-name">'+data.data[i].musicName+'</span>\
-										<span class="song-operate">\
-											<i class="fa fa-play-circle-o fa-lg" aria-hidden="true"></i>\
-											<i class="fa fa-plus fa-lg" aria-hidden="true"></i>\
-											<i class="fa fa-star-o fa-lg" aria-hidden="true"></i>\
-										</span>\
-									</p>';
+				var mid=data.data[0].musicId;
+				var index=1;
+				var musicName=data.data[0].musicName;
+				var musicId=data.data[0].musicId;
+				
+				if(token!=""){
+					setData(index,musicName,musicId);
+				}else{
+					for(var i=0;i<data.data.length;i++){
+						str1+='<p class="bd-con-i">\
+									<span class="song-num">'+(i+1)+'</span>\
+									<span class="song-name">'+data.data[i].musicName+'</span>\
+									<span class="song-operate">\
+										<i class="fa fa-play-circle-o fa-lg to-play" aria-hidden="true" data-id='+data.data[i].musicId+'></i>\
+										<i class="fa fa-plus fa-lg" aria-hidden="true"></i>\
+										<i class="fa fa-heart-o fa-lg add-col" aria-hidden="true" data-id='+data.data[i].musicId+'></i>\
+									</span>\
+								</p>';
+					}
+					$bdHot.html(str1);
 				}
-				$bdHot.html(str1);
-			}
+				function setData(index,musicName,musicId){
+					$.get('http://115.28.238.193/music/collect/'+uid+'/'+musicId+'?accessToken='+token,function(d){
+						if(d.data.status){
+							var col='fa fa-heart fa-lg add-col';
+						}else{
+							var col='fa fa-heart-o fa-lg add-col';
+						}
+						str1+='<p class="bd-con-i">\
+									<span class="song-num">'+index+'</span>\
+									<span class="song-name">'+musicName+'</span>\
+									<span class="song-operate">\
+										<i class="fa fa-play-circle-o fa-lg to-play" aria-hidden="true" data-id='+musicId+'></i>\
+										<i class="fa fa-plus fa-lg" aria-hidden="true"></i>\
+										<i class="'+col+'" aria-hidden="true" data-id='+musicId+'></i>\
+									</span>\
+								</p>';
+						index++;
+						if(index>data.data.length){
+							$bdHot.html(str1);
+							return;
+						}else{
+							setData(index,data.data[index-1].musicName,data.data[index-1].musicId);
+						}
+					});
+				}
+			};
 		});
 		$.get('http://115.28.238.193:8080/music/music/type/new?page=0&limit=10',function(data){
 			if(data.status==200){
-				for(var i=0;i<data.data.length;i++){
-					str2+='<p class="bd-con-i">\
-										<span class="song-num">'+(i+1)+'</span>\
-										<span class="song-name">'+data.data[i].musicName+'</span>\
-										<span class="song-operate">\
-											<i class="fa fa-play-circle-o fa-lg" aria-hidden="true"></i>\
-											<i class="fa fa-plus fa-lg" aria-hidden="true"></i>\
-											<i class="fa fa-star-o fa-lg" aria-hidden="true"></i>\
-										</span>\
-									</p>';
+				var mid=data.data[0].musicId;
+				var index=1;
+				var musicName=data.data[0].musicName;
+				var musicId=data.data[0].musicId;
+				
+				if(token!=""){
+					setData(index,musicName,musicId);
+				}else{
+					for(var i=0;i<data.data.length;i++){
+						str2+='<p class="bd-con-i">\
+									<span class="song-num">'+(i+1)+'</span>\
+									<span class="song-name">'+data.data[i].musicName+'</span>\
+									<span class="song-operate">\
+										<i class="fa fa-play-circle-o fa-lg to-play" aria-hidden="true" data-id='+data.data[i].musicId+'></i>\
+										<i class="fa fa-plus fa-lg" aria-hidden="true"></i>\
+										<i class="fa fa-heart-o fa-lg add-col" aria-hidden="true" data-id='+data.data[i].musicId+'></i>\
+									</span>\
+								</p>';
+					}
+					$bdNew.html(str2);
 				}
-				$bdNew.html(str2);
-			}
+				function setData(index,musicName,musicId){
+					$.get('http://115.28.238.193/music/collect/'+uid+'/'+musicId+'?accessToken='+token,function(d){
+						if(d.data.status){
+							var col='fa fa-heart fa-lg add-col';
+						}else{
+							var col='fa fa-heart-o fa-lg add-col';
+						}
+						str2+='<p class="bd-con-i">\
+									<span class="song-num">'+index+'</span>\
+									<span class="song-name">'+musicName+'</span>\
+									<span class="song-operate">\
+										<i class="fa fa-play-circle-o fa-lg to-play" aria-hidden="true" data-id='+musicId+'></i>\
+										<i class="fa fa-plus fa-lg" aria-hidden="true"></i>\
+										<i class="'+col+'" aria-hidden="true" data-id='+musicId+'></i>\
+									</span>\
+								</p>';
+						index++;
+						if(index>data.data.length){
+							$bdNew.html(str2);
+							return;
+						}else{
+							setData(index,data.data[index-1].musicName,data.data[index-1].musicId);
+						}
+					});
+				}
+			};
 		});
 	}
-	
+	function setCol(u,m,t,el){
+		var $el=$(el);
+		if(!t){
+			alert('请登录');
+		}else{
+			if($el.hasClass('fa-heart')){
+				$.ajax({
+					type:'PUT',
+					url:'http://115.28.238.193/music/collect/'+u+'/'+m+'?accessToken='+t,
+					success:function(data){
+						if(data.status==200){
+							$el.removeClass('fa-heart').addClass('fa-heart-o');
+						}else{
+							alert('取消收藏失败');
+						}
+					}
+				});
+			}else{
+				$.ajax({
+					type:'POST',
+					url:'http://115.28.238.193/music/collect/'+u+'/'+m+'?accessToken='+t,
+					success:function(data){
+						if(data.status==200){
+							$el.removeClass('fa-heart-o').addClass('fa-heart');
+						}else{
+							alert('收藏失败');
+						}
+					}
+				});
+			}
+			
+		}
+	}
+	$('.bd-list').delegate('.add-col','click',function(ev){
+		var mid=$(this).attr('data-id');
+		var uid=getCookie('uid');
+		var token=getCookie('token');
+		var tar=ev.target;
+		setCol(uid,mid,token,tar);
+	});
+	$('.bd-list').delegate('.to-play','click',function(){
+		var mid=$(this).attr('data-id');
+		var t=getCookie('token');
+		if(t!=""){
+			$.ajax({
+				type:"POST",
+				url:"http://115.28.238.193/music/musicCount/"+mid+"?accessToken="+t,
+				success:function(data){
+				}
+			})
+		}
+	});
+	function setLog(){
+		var uname=getCookie('name');
+		if(uname!=""){
+			$showLog.hide();
+			$userHome.show().html(uname);
+			$logArea.html('<p>亲爱的<span class="user-name">'+uname+'：</span><br /><br />欢迎来到智能推荐云音乐!!!</p>');
+		}
+	}
 });

@@ -9,6 +9,9 @@ $(function(){
 	var $ablumDesc=$('#album-desc');
 	var $albumImg=$('#album-img');
 	var $tableData=$('#table-data');
+	var $showLog=$('#show-log');
+	var $userHome=$('#user-home');
+	setLog();
 	getData();
 	function getData(){
 		$.get('http://115.28.238.193:8080/music/music/'+albumId,function(data){
@@ -36,5 +39,12 @@ $(function(){
 				$tableData.html(str);
 			}
 		});
+	}
+	function setLog(){
+		var uname=getCookie('name');
+		if(uname!=""){
+			$showLog.hide();
+			$userHome.show().html(uname);
+		}
 	}
 });
